@@ -1,0 +1,147 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$2 (jar:nested:/home/coding2fun/khekrn/relay-fleet/target/relay-fleet-1.0.0.jar/!BOOT-INF/lib/grpc-netty-shaded-1.80.0.jar!/)
+WARNING: Please consider reporting this to the maintainers of class io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by io.grpc.netty.shaded.io.netty.util.internal.NativeLibraryUtil in an unnamed module (jar:nested:/home/coding2fun/khekrn/relay-fleet/target/relay-fleet-1.0.0.jar/!BOOT-INF/lib/grpc-netty-shaded-1.80.0.jar!/)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+===== SOAK: 30 min/mode, 10 submitters, modes=[SYNC,STICKY], 5 workers x 2 servers =====
+
+===== SYNC (loan-sync) — warmup 30s, then 30 min sustained =====
+   [SYNC 01/30min] last-min: 10,572 ok, 176.2/s, p50 56.6ms p99 65.3ms max 79.1ms | total: 10,572 ok, 0 err
+   [SYNC 02/30min] last-min: 10,577 ok, 176.3/s, p50 56.6ms p99 64.2ms max 73.7ms | total: 21,149 ok, 0 err
+   [SYNC 03/30min] last-min: 10,265 ok, 171.1/s, p50 56.8ms p99 95.5ms max 196.0ms | total: 31,414 ok, 0 err
+   [SYNC 04/30min] last-min: 10,275 ok, 171.3/s, p50 58.6ms p99 64.0ms max 68.7ms | total: 41,689 ok, 0 err
+   [SYNC 05/30min] last-min: 10,407 ok, 173.5/s, p50 57.8ms p99 62.8ms max 69.3ms | total: 52,096 ok, 0 err
+   [SYNC 06/30min] last-min: 10,213 ok, 170.2/s, p50 59.1ms p99 63.8ms max 68.8ms | total: 62,309 ok, 0 err
+   [SYNC 07/30min] last-min: 10,240 ok, 170.7/s, p50 59.0ms p99 64.7ms max 70.1ms | total: 72,549 ok, 0 err
+   [SYNC 08/30min] last-min: 10,436 ok, 173.9/s, p50 57.5ms p99 63.2ms max 69.7ms | total: 82,985 ok, 0 err
+   [SYNC 09/30min] last-min: 10,517 ok, 175.3/s, p50 57.2ms p99 62.2ms max 81.9ms | total: 93,502 ok, 0 err
+   [SYNC 10/30min] last-min: 10,352 ok, 172.5/s, p50 58.1ms p99 63.8ms max 73.0ms | total: 103,854 ok, 0 err
+   [SYNC 11/30min] last-min: 10,508 ok, 175.1/s, p50 56.9ms p99 62.8ms max 87.0ms | total: 114,362 ok, 0 err
+   [SYNC 12/30min] last-min: 10,474 ok, 174.6/s, p50 57.1ms p99 63.8ms max 68.9ms | total: 124,836 ok, 0 err
+   [SYNC 13/30min] last-min: 10,412 ok, 173.5/s, p50 57.6ms p99 63.4ms max 70.9ms | total: 135,248 ok, 0 err
+   [SYNC 14/30min] last-min: 10,301 ok, 171.7/s, p50 58.3ms p99 64.3ms max 70.0ms | total: 145,549 ok, 0 err
+   [SYNC 15/30min] last-min: 9,005 ok, 150.1/s, p50 59.2ms p99 99.3ms max 211.8ms | total: 154,554 ok, 0 err
+   [SYNC 16/30min] last-min: 9,574 ok, 159.6/s, p50 58.2ms p99 92.4ms max 100.8ms | total: 164,128 ok, 0 err
+   [SYNC 17/30min] last-min: 6,760 ok, 112.7/s, p50 87.2ms p99 109.9ms max 225.7ms | total: 170,888 ok, 0 err
+   [SYNC 18/30min] last-min: 10,021 ok, 167.0/s, p50 58.3ms p99 93.9ms max 222.5ms | total: 180,909 ok, 0 err
+   [SYNC 19/30min] last-min: 9,082 ok, 151.4/s, p50 58.6ms p99 100.4ms max 210.8ms | total: 189,991 ok, 0 err
+   [SYNC 20/30min] last-min: 9,268 ok, 154.5/s, p50 57.7ms p99 96.8ms max 209.9ms | total: 199,259 ok, 0 err
+   [SYNC 21/30min] last-min: 10,131 ok, 168.9/s, p50 57.6ms p99 91.1ms max 191.8ms | total: 209,390 ok, 0 err
+   [SYNC 22/30min] last-min: 7,213 ok, 120.2/s, p50 85.9ms p99 112.9ms max 217.4ms | total: 216,603 ok, 0 err
+   [SYNC 23/30min] last-min: 9,836 ok, 163.9/s, p50 58.1ms p99 92.8ms max 138.8ms | total: 226,439 ok, 0 err
+   [SYNC 24/30min] last-min: 7,562 ok, 126.0/s, p50 85.0ms p99 103.1ms max 208.5ms | total: 234,001 ok, 0 err
+   [SYNC 25/30min] last-min: 9,735 ok, 162.3/s, p50 57.3ms p99 93.5ms max 100.7ms | total: 243,736 ok, 0 err
+   [SYNC 26/30min] last-min: 7,567 ok, 126.1/s, p50 84.6ms p99 102.2ms max 222.7ms | total: 251,303 ok, 0 err
+   [SYNC 27/30min] last-min: 9,402 ok, 156.7/s, p50 57.8ms p99 94.3ms max 103.8ms | total: 260,705 ok, 0 err
+   [SYNC 28/30min] last-min: 9,064 ok, 151.1/s, p50 58.7ms p99 100.0ms max 210.0ms | total: 269,769 ok, 0 err
+   [SYNC 29/30min] last-min: 8,395 ok, 139.9/s, p50 60.4ms p99 106.8ms max 217.6ms | total: 278,164 ok, 0 err
+   [SYNC 30/30min] last-min: 10,162 ok, 169.4/s, p50 57.8ms p99 89.5ms max 191.9ms | total: 288,326 ok, 0 err
+
+===== SYNC SUMMARY — 288,334 ok, 0 err, 30.0 min =====
+   throughput: 160.2 runs/s sustained
+   latency:    min 49.9 | p50 58.1 | p90 85.4 | p99 96.4 | p99.9 183.0 | max 225.7 ms
+   per-minute timeline:
+   min        runs   runs/s      p50      p90      p99      max
+   1        10,571    176.2    56.6ms    59.0ms    65.3ms    79.1ms
+   2        10,578    176.3    56.6ms    59.0ms    64.2ms    73.7ms
+   3        10,265    171.1    56.8ms    61.6ms    95.5ms   196.0ms
+   4        10,275    171.3    58.6ms    61.5ms    64.0ms    68.7ms
+   5        10,405    173.4    57.8ms    60.3ms    62.8ms    69.3ms
+   6        10,208    170.1    59.1ms    61.6ms    63.8ms    68.8ms
+   7        10,245    170.8    59.0ms    61.6ms    64.7ms    70.1ms
+   8        10,438    174.0    57.5ms    60.5ms    63.2ms    69.7ms
+   9        10,513    175.2    57.2ms    59.6ms    62.2ms    81.9ms
+   10       10,355    172.6    58.1ms    61.2ms    63.8ms    73.0ms
+   11       10,501    175.0    57.0ms    60.2ms    62.8ms    87.0ms
+   12       10,476    174.6    57.1ms    61.3ms    63.8ms    68.9ms
+   13       10,414    173.6    57.6ms    60.6ms    63.4ms    70.9ms
+   14       10,300    171.7    58.3ms    61.7ms    64.3ms    70.0ms
+   15        9,006    150.1    59.2ms    87.7ms    99.3ms   211.8ms
+   16        9,572    159.5    58.2ms    85.5ms    92.4ms   100.8ms
+   17        6,762    112.7    87.2ms    94.7ms   109.9ms   225.7ms
+   18       10,016    166.9    58.3ms    62.3ms    94.3ms   222.5ms
+   19        9,082    151.4    58.6ms    88.6ms   100.4ms   210.8ms
+   20        9,271    154.5    57.7ms    87.6ms    96.8ms   209.9ms
+   21       10,128    168.8    57.6ms    61.9ms    91.0ms   191.8ms
+   22        7,213    120.2    85.9ms    93.8ms   112.9ms   217.4ms
+   23        9,840    164.0    58.1ms    81.8ms    92.8ms   138.8ms
+   24        7,557    126.0    85.0ms    93.1ms   103.1ms   208.5ms
+   25        9,739    162.3    57.3ms    85.4ms    93.5ms   100.7ms
+   26        7,564    126.1    84.6ms    92.5ms   102.2ms   222.7ms
+   27        9,408    156.8    57.8ms    87.3ms    94.3ms   103.8ms
+   28        9,062    151.0    58.7ms    88.6ms   100.0ms   210.0ms
+   29        8,391    139.9    60.4ms    91.4ms   106.8ms   217.6ms
+   30       10,169    169.5    57.8ms    60.9ms    89.3ms   191.9ms
+   31           10      0.2    85.6ms    88.8ms    90.2ms    90.2ms
+
+===== STICKY (loan-sticky) — warmup 30s, then 30 min sustained =====
+   [STICKY 01/30min] last-min: 11,499 ok, 191.7/s, p50 52.0ms p99 62.5ms max 75.3ms | total: 11,499 ok, 0 err
+   [STICKY 02/30min] last-min: 10,685 ok, 178.1/s, p50 53.6ms p99 77.1ms max 190.1ms | total: 22,184 ok, 0 err
+   [STICKY 03/30min] last-min: 11,580 ok, 193.0/s, p50 51.8ms p99 60.0ms max 71.0ms | total: 33,764 ok, 0 err
+   [STICKY 04/30min] last-min: 10,912 ok, 181.9/s, p50 52.8ms p99 77.8ms max 182.6ms | total: 44,676 ok, 0 err
+   [STICKY 05/30min] last-min: 10,970 ok, 182.8/s, p50 52.4ms p99 78.7ms max 188.0ms | total: 55,646 ok, 0 err
+   [STICKY 06/30min] last-min: 11,629 ok, 193.8/s, p50 51.7ms p99 60.4ms max 71.7ms | total: 67,275 ok, 0 err
+   [STICKY 07/30min] last-min: 10,946 ok, 182.4/s, p50 52.8ms p99 77.2ms max 183.7ms | total: 78,221 ok, 0 err
+   [STICKY 08/30min] last-min: 10,924 ok, 182.1/s, p50 52.6ms p99 74.0ms max 205.1ms | total: 89,145 ok, 0 err
+   [STICKY 09/30min] last-min: 11,447 ok, 190.8/s, p50 51.9ms p99 75.4ms max 185.0ms | total: 100,592 ok, 0 err
+   [STICKY 10/30min] last-min: 10,892 ok, 181.5/s, p50 53.0ms p99 77.6ms max 193.4ms | total: 111,484 ok, 0 err
+   [STICKY 11/30min] last-min: 10,874 ok, 181.2/s, p50 53.6ms p99 73.9ms max 191.1ms | total: 122,358 ok, 0 err
+   [STICKY 12/30min] last-min: 11,378 ok, 189.6/s, p50 52.2ms p99 69.4ms max 165.9ms | total: 133,736 ok, 0 err
+   [STICKY 13/30min] last-min: 10,879 ok, 181.3/s, p50 53.1ms p99 77.9ms max 195.4ms | total: 144,615 ok, 0 err
+   [STICKY 14/30min] last-min: 10,865 ok, 181.1/s, p50 52.8ms p99 75.9ms max 179.2ms | total: 155,480 ok, 0 err
+   [STICKY 15/30min] last-min: 11,489 ok, 191.5/s, p50 51.9ms p99 74.0ms max 186.0ms | total: 166,969 ok, 0 err
+   [STICKY 16/30min] last-min: 10,848 ok, 180.8/s, p50 53.0ms p99 78.6ms max 189.2ms | total: 177,817 ok, 0 err
+   [STICKY 17/30min] last-min: 10,887 ok, 181.5/s, p50 52.7ms p99 77.2ms max 179.2ms | total: 188,704 ok, 0 err
+   [STICKY 18/30min] last-min: 11,599 ok, 193.3/s, p50 51.6ms p99 67.1ms max 164.7ms | total: 200,303 ok, 0 err
+   [STICKY 19/30min] last-min: 10,891 ok, 181.5/s, p50 52.8ms p99 77.4ms max 189.5ms | total: 211,194 ok, 0 err
+   [STICKY 20/30min] last-min: 10,815 ok, 180.3/s, p50 52.9ms p99 75.6ms max 187.0ms | total: 222,009 ok, 0 err
+   [STICKY 21/30min] last-min: 11,349 ok, 189.2/s, p50 52.6ms p99 65.1ms max 175.8ms | total: 233,358 ok, 0 err
+   [STICKY 22/30min] last-min: 10,599 ok, 176.7/s, p50 53.6ms p99 87.4ms max 186.2ms | total: 243,957 ok, 0 err
+   [STICKY 23/30min] last-min: 11,317 ok, 188.6/s, p50 52.3ms p99 75.5ms max 185.9ms | total: 255,274 ok, 0 err
+   [STICKY 24/30min] last-min: 11,338 ok, 189.0/s, p50 52.2ms p99 76.0ms max 190.3ms | total: 266,612 ok, 0 err
+   [STICKY 25/30min] last-min: 11,155 ok, 185.9/s, p50 52.4ms p99 78.5ms max 188.3ms | total: 277,767 ok, 0 err
+   [STICKY 26/30min] last-min: 11,424 ok, 190.4/s, p50 52.0ms p99 75.5ms max 190.8ms | total: 289,191 ok, 0 err
+   [STICKY 27/30min] last-min: 11,121 ok, 185.4/s, p50 52.5ms p99 82.2ms max 198.6ms | total: 300,312 ok, 0 err
+   [STICKY 28/30min] last-min: 11,417 ok, 190.3/s, p50 52.0ms p99 74.7ms max 181.6ms | total: 311,729 ok, 0 err
+   [STICKY 29/30min] last-min: 11,404 ok, 190.1/s, p50 52.1ms p99 80.9ms max 187.5ms | total: 323,133 ok, 0 err
+
+===== STICKY SUMMARY — 334,339 ok, 0 err, 30.0 min =====
+   throughput: 185.7 runs/s sustained
+   latency:    min 40.7 | p50 52.4 | p90 61.1 | p99 76.4 | p99.9 166.4 | max 205.1 ms
+   per-minute timeline:
+   min        runs   runs/s      p50      p90      p99      max
+   1        11,499    191.7    52.0ms    55.4ms    62.5ms    75.3ms
+   2        10,685    178.1    53.6ms    65.7ms    77.1ms   190.1ms
+   3        11,575    192.9    51.8ms    54.7ms    60.0ms    71.0ms
+   4        10,917    182.0    52.8ms    62.9ms    77.8ms   182.6ms
+   5        10,970    182.8    52.4ms    64.9ms    78.7ms   188.0ms
+   6        11,629    193.8    51.7ms    54.6ms    60.4ms    71.7ms
+   7        10,943    182.4    52.8ms    62.8ms    77.2ms   183.7ms
+   8        10,927    182.1    52.6ms    64.6ms    74.0ms   205.1ms
+   9        11,444    190.7    51.9ms    56.4ms    75.4ms   185.0ms
+   10       10,891    181.5    53.0ms    63.1ms    77.6ms   193.4ms
+   11       10,878    181.3    53.6ms    63.8ms    73.9ms   191.1ms
+   12       11,375    189.6    52.2ms    57.1ms    69.4ms   165.9ms
+   13       10,882    181.4    53.1ms    63.6ms    77.9ms   195.4ms
+   14       10,860    181.0    52.8ms    64.8ms    75.9ms   179.2ms
+   15       11,489    191.5    51.9ms    54.9ms    74.0ms   186.0ms
+   16       10,849    180.8    53.0ms    63.9ms    78.6ms   189.2ms
+   17       10,887    181.5    52.7ms    65.3ms    77.2ms   179.2ms
+   18       11,601    193.4    51.6ms    55.1ms    66.9ms   164.7ms
+   19       10,887    181.5    52.8ms    64.6ms    77.4ms   189.5ms
+   20       10,816    180.3    52.9ms    65.1ms    75.6ms   187.0ms
+   21       11,350    189.2    52.6ms    56.7ms    65.1ms   175.8ms
+   22       10,596    176.6    53.6ms    66.9ms    87.4ms   186.2ms
+   23       11,319    188.7    52.3ms    56.7ms    75.5ms   185.9ms
+   24       11,343    189.1    52.2ms    56.9ms    76.0ms   190.3ms
+   25       11,150    185.8    52.4ms    59.2ms    78.5ms   188.3ms
+   26       11,422    190.4    52.0ms    55.7ms    75.5ms   190.8ms
+   27       11,127    185.5    52.5ms    59.1ms    82.2ms   198.6ms
+   28       11,411    190.2    52.0ms    56.0ms    74.7ms   181.6ms
+   29       11,402    190.0    52.1ms    55.3ms    80.9ms   187.5ms
+   30       11,205    186.8    52.3ms    58.6ms    78.5ms   185.9ms
+   31           10      0.2    77.0ms    77.9ms    78.3ms    78.3ms

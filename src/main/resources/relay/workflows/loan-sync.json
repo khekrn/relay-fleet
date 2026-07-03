@@ -1,0 +1,16 @@
+{
+  "name": "loan-sync",
+  "version": 1,
+  "mode": "SYNC",
+  "output": "${decide.output}",
+  "start": "validate",
+  "states": {
+    "validate": { "type": "TASK", "task": "validate", "input": { "applicant": "${input.applicant}", "amount": "${input.amount}" }, "next": "underwrite" },
+    "underwrite": { "type": "PARALLEL", "next": "decide", "branches": [
+      { "start": "credit", "states": { "credit": { "type": "TASK", "task": "creditScore", "input": { "applicant": "${input.applicant}" }, "end": true } } },
+      { "start": "fraud",  "states": { "fraud":  { "type": "TASK", "task": "fraudCheck",  "input": { "applicant": "${input.applicant}" }, "end": true } } },
+      { "start": "kyc",    "states": { "kyc":    { "type": "TASK", "task": "kycCheck",    "input": { "applicant": "${input.applicant}" }, "end": true } } }
+    ]},
+    "decide": { "type": "TASK", "task": "decide", "input": { "amount": "${input.amount}" }, "end": true }
+  }
+}

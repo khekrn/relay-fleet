@@ -41,6 +41,7 @@ public class FleetApplication {
     record Fleet(List<Worker> workers, List<ManagedChannel> channels) {}
 
     @Bean
+    @org.springframework.context.annotation.Profile("!soak")   // --spring.profiles.active=soak runs SoakRunner instead
     CommandLineRunner demo() {
         return args -> {
             ObjectMapper json = new ObjectMapper();
